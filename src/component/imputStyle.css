@@ -1,10 +1,27 @@
-.my-img{
+.container-img{
     width: 50%;
-    height: 30%;
+    height: 30rem;
     
 }
+.position{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    margin: auto;
+    margin-top: 1rem;
+}
 .text-top{
-    background-color: beige;
+ 
     margin: auto;
 
+}
+.input-top{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+}
+.piker-color{
+    margin-left: 2%;
 }
