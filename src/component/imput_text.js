@@ -11,9 +11,12 @@ const ImgMeme=()=>{
     const [txtH,setTextH]=useState(1)
     const [txtV,setTextV]=useState(1)
 
-    const postionTxt = (e) => {
-        (e.target.id==="position-v") ?  setTextV(e.target.value)
-        :setTextH(e.target.value)
+    const positionV=(e)=>{
+        setTextV(e.target.value)
+    }
+
+    const positionH=(e)=>{
+        setTextH(e.target.value)
     }
     const textMeme=(e)=>{
         setTextMeme(e.target.value)
@@ -50,17 +53,34 @@ const ImgMeme=()=>{
 
         </div>
         <div className="position">
-        <select id="position-v" onChange={postionTxt} className="form-select form-select-lg"  aria-label=".form-select-lg example">
+        <select id="position-v" onChange={positionV} className="form-select form-select-lg"  aria-label=".form-select-lg example">
             <option value={1}>Arriba</option>
             <option value={2}>Centro</option>
             <option value={3}>Abajo</option>            
         </select>
-        <select id="position-h" onChange={postionTxt} className="form-select form-select-lg"  aria-label=".form-select-lg example">
+        <select id="position-h" onChange={positionH} className="form-select form-select-lg"  aria-label=".form-select-lg example">
             <option value={1}>Izquierda</option>
             <option value={2}>Centro</option>
             <option value={3}>Derecha</option>            
         </select>
         </div>
+         <div id='select-container-font' className="type-font">
+            <select id='dropdown-font' className="form-select form-select-lg">
+                <option value='' disabled selected>Estilos</option>
+                <option>Poppins Sans-Serif</option>
+                <option>Roboto</option>
+                <option>Inspiration</option>
+                <option>Oswald</option>
+                <option>Smokum</option>    
+            </select>
+            <div className="select-font-size">
+                <label for="price">Tamaño: </label> 
+                {/* agregar el value */}
+                <input type="range" name="size" id="size" min="9" max="20" step="1"></input>
+                <output className="size-output" for="size"></output>
+            </div>
+        </div>
+       
         <h3 className="mt-3 mb-3 text-center" >Tu imagen</h3>
         
         <select onChange={selectImg} className="form-select form-select-lg mb-3 w-50 m-auto"  aria-label=".form-select-lg example">
