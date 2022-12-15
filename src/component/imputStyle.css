@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+/*Estilo Inspiration */
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
+
+/* Estilo Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+/* Estilo Poppins Sans Serif */
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+/* Estilo Oswald */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+/* Estilo Smokum */
+@import url('https://fonts.googleapis.com/css2?family=Smokum&display=swap');
+
 .container-img{
     width: 50%;
     height: 30rem;
@@ -8,7 +25,7 @@
     width: 50%;
     align-items: center;
     margin: auto;
-    margin-top: 1rem;
+    margin-top: 1rem;    
 }
 #position-v, #position-h{
     margin-left: 1%;

@@ -10,6 +10,19 @@ const ImgMeme=()=>{
     const [text_color, setTextColor]=useState("initclass");
     const [txtH,setTextH]=useState(1)
     const [txtV,setTextV]=useState(1)
+    const [textFamily,setTextFamily]=useState()
+    const [textSize,setTextSize]=useState(34)
+
+    const myFontSize=(e)=>{
+      setTextSize(e.target.value)
+  //   alert(e.target.value)
+    }
+
+    const myFont=(e)=>{
+       setTextFamily(e.target.value)
+     //  alert(e.target.value)
+    }
+
 
     const positionV=(e)=>{
         setTextV(e.target.value)
@@ -41,6 +54,9 @@ const ImgMeme=()=>{
             link.click()
         });
     }
+
+
+
     return (
      <div className="text-center">
         <h1 className="mt-3 mb-3 text-center">
@@ -65,7 +81,7 @@ const ImgMeme=()=>{
         </select>
         </div>
          <div id='select-container-font' className="type-font">
-            <select id='dropdown-font' className="form-select form-select-lg">
+            <select onChange={myFont} id='dropdown-font' className="form-select form-select-lg">
                 <option value='' disabled selected>Estilos</option>
                 <option>Poppins Sans-Serif</option>
                 <option>Roboto</option>
@@ -76,7 +92,7 @@ const ImgMeme=()=>{
             <div className="select-font-size">
                 <label for="price">Tamaño: </label> 
                 {/* agregar el value */}
-                <input type="range" name="size" id="size" min="9" max="20" step="1"></input>
+                <input onChange={myFontSize} type="range" name="size" id="size" min="24" max="200"  step="1"></input>
                 <output className="size-output" for="size"></output>
             </div>
         </div>
@@ -92,7 +108,7 @@ const ImgMeme=()=>{
         <figure className="text-center" id="importimg">
          <div className="container-img m-auto" style={{backgroundImage: 'url('+path+imgMeme+'.jpg)', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}}>
             <div style={{gridColumn: `${txtH}`, gridRow: `${txtV}`}}>
-            <p style={{color: `${text_color}` }} className="text-top h1">{text} </p>
+            <p style={{color: `${text_color}`, fontFamily:textFamily, fontSize: textSize+"px"}} className="text-top h1">{text} </p>
             </div>
         </div>
             
